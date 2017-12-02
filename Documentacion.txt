@@ -1,0 +1,45 @@
+ DESCRIPCIÓN
+ 
+	* Se entrega el esqueleto completo del proyecto con el ejemplo del círculo hecho en clase, pero con una clase.
+	
+	* La clase círculo no está hecha, sólo es el ejemplo de clase.
+	
+	* Se ha dejado el código que llama a la clase círculo en los eventos correspondientes a círculo y cuadrado. Esto se ha hecho así para poder probar la funcionalidad.
+	
+	* Tanto la clase círculo como sus llamadas deben quitarse y sustituirse por el código final. Se han marcado con // Ejemplo, para borrar
+
+ ESTRUCTURAS DE DATOS
+ 
+	* Se han declarado 5 arrays diferentes para cada figura, donde se irán almacenando las figuras creadas.
+ 
+ INTERFAZ
+ 
+	* Se han definido 8 botones: 5 para las figuras, 2 para hacer y deshacer y otro para no seleccionar ninguna herramienta (ratón).
+	
+	* Los objetos se crean haciendo click sobre el canvas cuando una herramienta está seleccionada. Se ajustan arrastrando el ratón.
+	
+	* Existe un segundo canvas donde se indica mediante una imagen la herramienta activa
+	
+ FUNCIONALIDADES
+ 
+	* En inicio.js existen 2 eventos que controlan la acción de crear objeto y la de ajustarlo
+	
+		- Click de ratón: en este listener hay un switch donde hay que poner la llamada a los métodos de creación de cada clase: círculo, cuadrado, línea y polígono.
+		
+		- MouseMove: se usa para definir los parámetros del objeto (tamaño, dirección, forma...). Hay un switch por cada clase y hay que poner aquí los métidos de modificación de cada clase.
+		
+		- Se han definido también en el evento de click los switch para hacer y deshacer
+ 
+	* bucle.js: contiene 4 bucles, 1 por cada tipo de figura, donde se debe llama al método de dibujar de cada clase.
+
+ CUESTIONES
+	
+	* La clase texto puede que tenga un tratamiento diferente, necesita un input
+	
+	* La clase polígono también necesita un input: número de lados (>3)
+	
+	* Puede que haya que añadir lógica al esqueleto para las acciones de hacer y deshacer.
+	
+	
+	
+ 

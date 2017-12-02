@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+            #herramientas{width:40px;height:400px;float:left;}
+            #herramientas button{width:30px;height:30px;}
+            canvas{float:left;border:1px solid black;}
+            #herramientas button img{width:100%;height:100%;}
+        </style>
+    </head>
+    <body>
+        <div id="herramientas">
+            <button herramienta="circulo"><img src="img/circulo.png"></button>
+            <button herramienta="cuadrado"><img src="img/cuadrado.png"></button>
+            <button herramienta="linea"><img src="img/linea.png"></button>
+            <button herramienta="poligono"><img src="img/poligono.png"></button>
+			<button herramienta="texto"><img src="img/texto.png"></button>
+            <button herramienta="hacer"><img src="img/hacer.png"></button>
+            <button herramienta="deshacer"><img src="img/deshacer.png"></button>
+			<button herramienta="raton"><img src="img/raton.png"></button>			
+		</div>		
+		
+		
+        <canvas id="lienzo1" width = 512px height = 512px></canvas>
+		<canvas id="seleccion" width = 30px height = 30px></canvas>
+        
+		<!-- Importación de librerías -->
+		<script src="lib/jquery.js"></script>		
+		
+		<!-- Importación de clases -->
+		<script src="js/clases/Circulo.js"></script>
+		
+		<!-- Importación de js -->
+		<script src="js/bucle.js"></script>
+		<script src="js/inicio.js"></script>
+		<script src="js/condicionesiniciales.js"></script>
+		
+		
+    </body>
+</html>
