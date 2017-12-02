@@ -28,8 +28,7 @@ function inicio(){
 					
 				// Crear cuadrado
 				case "cuadrado":
-					circulos.push(new Circulo());									// Ejemplo, para borrar
-					circulos[circulos.length - 1].constructor(mouseX,mouseY,10);	// Ejemplo, para borrar
+
 					break;
 				
 				// Se llama a la clase línea para ajustar	
@@ -68,11 +67,13 @@ function inicio(){
 				// Se llama a la clase círculo para ajustar
 				case "circulo":
 					circulos[circulos.length - 1].cambiaRadio(mouseX);	// Ejemplo, para borrar
+					console.log(circulos);
+					console.log(circulos[circulos.length -1]);
 					break;
 				
 				// Se llama a la clase cuadrado para ajustar			
 				case "cuadrado":
-					circulos[circulos.length - 1].cambiaRadio(mouseX);	// Ejemplo, para borrar
+
 					break;
 				
 				// Se llama a la clase línea para ajustar	
