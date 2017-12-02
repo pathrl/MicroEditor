@@ -67,8 +67,6 @@ function inicio(){
 				// Se llama a la clase círculo para ajustar
 				case "circulo":
 					circulos[circulos.length - 1].cambiaRadio(mouseX);	// Ejemplo, para borrar
-					console.log(circulos);
-					console.log(circulos[circulos.length -1]);
 					break;
 				
 				// Se llama a la clase cuadrado para ajustar			
