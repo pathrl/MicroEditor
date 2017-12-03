@@ -1,30 +1,27 @@
 // Ejemplo, para borrar
 function Circulo() {
 	// Propiedades
-	this.cx; // Posición x en el canvas
-	this.cy; // Posición y en el canvas
+	this.cx; // Posiciï¿½n x en el canvas
+	this.cy; // Posiciï¿½n y en el canvas
 	this.cr; // Radio
-	
-	// Métodos
+
+	// Mï¿½todos
 	this.constructor = function(x,y,radio) {
 		this.cx = x;
 		this.cy = y;
 		this.cr = radio;
-		
 	}
-	
-	this.dibujar = function() {		
+
+	this.dibujar = function() {
 		contexto.strikeStyle = "black";
 		contexto.beginPath();
-		contexto.arc(this.cx, this.cy, this.cr, 0, Math.PI * 2, true);		
-		contexto.stroke();		
+		contexto.arc(this.cx, this.cy, this.cr, 0, Math.PI * 2, true);
+		contexto.stroke();
 	}
-	
-	this.cambiaRadio = function(posicion) {		
-		this.cr = posicion - this.cx;
-		if(this.cr < 0){
-			this.cr = 1;
-		}
+
+	this.cambiaRadio = function(posicion) {
+		const index = historicoPasado.length - 1
+		this.cr = Math.max(Math.abs(posicion[0] - historicoPasado[index].cx), Math.abs(posicion[1] - historicoPasado[index].cy)) / 2;
 	}
-	
+
 }

@@ -1,45 +1,34 @@
- DESCRIPCIÓN
+DESCRIPCIÃ“N
+	* Se entrega el esqueleto completo del proyecto con el ejemplo del cÃ­rculo hecho en clase, pero con una clase.
+	* La clase cÃ­rculo no estÃ¡ hecha, sÃ³lo es el ejemplo de clase.
+	* Se ha dejado el cÃ³digo que llama a la clase Circulo en los eventos correspondientes a cÃ­rculo. Esto se ha hecho asÃ­ para poder probar la funcionalidad.
+	* Tanto la clase Circulo como sus llamadas deben quitarse y sustituirse por el cÃ³digo final. Se han marcado con // Ejemplo, para borrar
+	* En inicio.js se encuentran los listeners de los controles.
+	* En eventos.js se encuentran las funciones que son llamadas desde los listeners.
  
-	* Se entrega el esqueleto completo del proyecto con el ejemplo del círculo hecho en clase, pero con una clase.
+INTERFAZ
+	* Se han definido 8 botones: 5 para las figuras, 2 para hacer y deshacer y otro para no seleccionar ninguna herramienta (ratÃ³n).
+	* Los objetos se crean haciendo click sobre el canvas cuando una herramienta estÃ¡ seleccionada. Se ajustan arrastrando el ratÃ³n.
+	* Existe un segundo canvas donde se indica mediante una imagen la herramienta activa.
 	
-	* La clase círculo no está hecha, sólo es el ejemplo de clase.
-	
-	* Se ha dejado el código que llama a la clase círculo en los eventos correspondientes a círculo y cuadrado. Esto se ha hecho así para poder probar la funcionalidad.
-	
-	* Tanto la clase círculo como sus llamadas deben quitarse y sustituirse por el código final. Se han marcado con // Ejemplo, para borrar
-
- ESTRUCTURAS DE DATOS
- 
-	* Se han declarado 5 arrays diferentes para cada figura, donde se irán almacenando las figuras creadas.
- 
- INTERFAZ
- 
-	* Se han definido 8 botones: 5 para las figuras, 2 para hacer y deshacer y otro para no seleccionar ninguna herramienta (ratón).
-	
-	* Los objetos se crean haciendo click sobre el canvas cuando una herramienta está seleccionada. Se ajustan arrastrando el ratón.
-	
-	* Existe un segundo canvas donde se indica mediante una imagen la herramienta activa
-	
- FUNCIONALIDADES
- 
-	* En inicio.js existen 2 eventos que controlan la acción de crear objeto y la de ajustarlo
-	
-		- Click de ratón: en este listener hay un switch donde hay que poner la llamada a los métodos de creación de cada clase: círculo, cuadrado, línea y polígono.
+FUNCIONALIDADES
+	* En inicio.js existen 2 listeners que controlan la acciÃ³n de crear objeto y la de ajustarlo
+		- Click de ratÃ³n: en este listener hay una llamada a una funciÃ³n que contiene un switch donde hay que poner la llamada a los mÃ©todos de creaciÃ³n de cada clase: cÃ­rculo, cuadrado, lÃ­nea y polÃ­gono.
+		- MouseMove: se usa para definir los parÃ¡metros del objeto (tamaÃ±o, direcciÃ³n, forma...). Hay una llamada a una funciÃ³n que contiene un switch por cada clase y hay que poner aquÃ­ los mÃ©tidos de modificaciÃ³n de cada clase.
+		- Se han definido tambiÃ©n en el evento de click los switch para hacer y deshacer.
 		
-		- MouseMove: se usa para definir los parámetros del objeto (tamaño, dirección, forma...). Hay un switch por cada clase y hay que poner aquí los métidos de modificación de cada clase.
-		
-		- Se han definido también en el evento de click los switch para hacer y deshacer
- 
-	* bucle.js: contiene 4 bucles, 1 por cada tipo de figura, donde se debe llama al método de dibujar de cada clase.
+DESHACER / REHACER
+	* Se ha implementado para que tambiÃ©n se pueda hacer mediante atajos de teclado (CTRL + Z, CTRL + Y).
+	
+CÃ“MO AÃ‘ADIR NUEVAS HERRAMIENTAS
+	Los pasos son los siguientes:
+	* Crear una clase con las propiedades y mÃ©todos de la herramienta (estÃ¡n creadas ya pero vacÃ­as). Fijarse en la clase Circulo de ejemplo.
+	* La clase tendrÃ¡ que tener un mÃ©todo que se llame dibujar() y ahÃ­ es donde tiene que ir la lÃ³gica de pintado.
+	* AdemÃ¡s, la clase tambiÃ©n podrÃ¡ tener algÃºn mÃ©todo de actualizaciÃ³n (como por ejemplo que al mover el ratÃ³n se haga mÃ¡s grande/pequeÃ±o).
+	* En el fichero eventos.js, en la funciÃ³n hacerClicEnCanvas(), donde pone el switch hay que hacer la creaciÃ³n del objeto de la herramienta. Fijarse en el caso del cÃ­rculo.
+	* En el fichero eventos.js, en la funciÃ³n moverRatonEnCanvas(), donde pone el switch hay que hacer el ajuste del objeto de la herramienta. Fijarse en el caso del cÃ­rculo.
 
- CUESTIONES
-	
-	* La clase texto puede que tenga un tratamiento diferente, necesita un input
-	
-	* La clase polígono también necesita un input: número de lados (>3)
-	
-	* Puede que haya que añadir lógica al esqueleto para las acciones de hacer y deshacer.
-	
-	
-	
+CUESTIONES
+	* La clase texto puede que tenga un tratamiento diferente, necesita un input para recoger el texto.
+	* La clase polÃ­gono tambiÃ©n necesita un input para recoger el nÃºmero de lados (>2)
  
