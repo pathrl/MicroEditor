@@ -19,7 +19,7 @@ function hacerClicEnCanvas(event) {
 			// Crear cuadrado
 			case "cuadrado":
 				var cuadrado = new Cuadrado();
-				cuadrado.constructor(ratonPos[0], ratonPos[1], 100);
+				cuadrado.constructor(ratonPos[0], ratonPos[1], 10, 10);
 				historicoPasado.push(cuadrado);
 				break;
 
@@ -53,7 +53,7 @@ function moverRatonEnCanvas(event) {
 		switch (herramientaActiva) {
 			// Se llama a la clase círculo para ajustar
 			case "circulo":
-				historicoPasado[index].cambiaRadio(ratonPos);
+				historicoPasado[index].changeRadius(ratonPos);
 				break;
 
 			// Se llama a la clase cuadrado para ajustar
