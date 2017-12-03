@@ -25,7 +25,9 @@ function hacerClicEnCanvas(event) {
 
 			// Se llama a la clase línea para ajustar
 			case "linea":
-
+				var linea = new Linea();
+				linea.constructor(ratonPos[0], ratonPos[1]);
+				historicoPasado.push(linea);
 				break;
 
 			// Se llama a la clase polígono para ajustar
@@ -63,7 +65,7 @@ function moverRatonEnCanvas(event) {
 
 			// Se llama a la clase línea para ajustar
 			case "linea":
-
+				historicoPasado[index].changePosition(ratonPos);
 				break;
 
 			// Se llama a la clase polígono para ajustar
