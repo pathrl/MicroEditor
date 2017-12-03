@@ -20,7 +20,6 @@ function Circulo() {
 
 	this.cambiaRadio = function(posicion) {
 		const index = historicoPasado.length - 1;
-		console.log(historicoPasado[index], posicion);
 		this.cr = Math.max(Math.abs(posicion[0] - historicoPasado[index].cx), Math.abs(posicion[1] - historicoPasado[index].cy)) / 2;
 	}
 
