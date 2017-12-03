@@ -1,8 +1,5 @@
 DESCRIPCIÓN
 	* Se entrega el esqueleto completo del proyecto con el ejemplo del círculo hecho en clase, pero con una clase.
-	* La clase círculo no está hecha, sólo es el ejemplo de clase.
-	* Se ha dejado el código que llama a la clase Circulo en los eventos correspondientes a círculo. Esto se ha hecho así para poder probar la funcionalidad.
-	* Tanto la clase Circulo como sus llamadas deben quitarse y sustituirse por el código final. Se han marcado con // Ejemplo, para borrar
 	* En inicio.js se encuentran los listeners de los controles.
 	* En eventos.js se encuentran las funciones que son llamadas desde los listeners.
  
