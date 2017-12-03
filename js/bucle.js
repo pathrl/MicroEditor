@@ -5,7 +5,7 @@ function bucle(){
 
 	// Pintamos todos los objetos de nuestra matriz histórica
 	for (var i = 0; i < historicoPasado.length; i++) {
-		historicoPasado[i].dibujar();
+		historicoPasado[i].draw();
 	}
 
 	clearTimeout(temporizador)

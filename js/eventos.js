@@ -18,6 +18,9 @@ function hacerClicEnCanvas(event) {
 
 			// Crear cuadrado
 			case "cuadrado":
+				var cuadrado = new Cuadrado();
+				cuadrado.constructor(ratonPos[0], ratonPos[1], 100);
+				historicoPasado.push(cuadrado);
 				break;
 
 			// Se llama a la clase línea para ajustar
@@ -44,16 +47,18 @@ function hacerClicEnCanvas(event) {
 
 function moverRatonEnCanvas(event) {
 	var ratonPos = obtenerPosicionRaton(event);
+	const index = historicoPasado.length - 1;
 
 	if (ajustandoObjeto) { // Modificamos el objeto. Siempre es el último creado (length - 1)
 		switch (herramientaActiva) {
 			// Se llama a la clase círculo para ajustar
 			case "circulo":
-				historicoPasado[historicoPasado.length - 1].cambiaRadio(ratonPos);
+				historicoPasado[index].cambiaRadio(ratonPos);
 				break;
 
 			// Se llama a la clase cuadrado para ajustar
 			case "cuadrado":
+				historicoPasado[index].changeSize(ratonPos);
 				break;
 
 			// Se llama a la clase línea para ajustar
